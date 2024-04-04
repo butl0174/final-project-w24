@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    /* padding: 20px; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    padding: 30px;
+}
+
+img{
+    width: 100%;
+    border-radius: 5px;
+} 
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo{
+    width: 100px;
+}
+
+nav ul li{
+    list-style: none;
+    padding-left: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700px;
+}
+
+/* packaging */
+
+#packaging .wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+
+    grid-template-areas: 
+    
+    "img1 img1 img1"
+    "img1 img1 img1"
+    "img1 img1 img1"
+    "img2 img3 img4"
+}
+
+#packaging img:nth-child(1){
+    grid-area: img1;    
+}
+
+#packaging img:nth-child(2){
+    grid-area: img2; 
+}
+
+#packaging img:nth-child(3){
+    grid-area: img3; 
+}
+
+#packaging img:nth-child(4){
+    grid-area: img4;
+}
+
+/* description */
+
+h1{
+    font-size: 35px;
+    font-weight: 500;
+   
+    
+}
+
+ol li{
+    list-style: none;
+    margin-left: -32px;
+}
+
+ol li h3{
+    text-transform: uppercase;
+    padding: none;
+    margin-bottom: -20px;
+}
+
+#description a:link,
+#description a:visited {
+  display: inline-block;
+  padding: .3em 1em;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-top: auto;
+  font-weight: 600;
+}
+
+
+#history h2,
+#reviews h2,
+#prices h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+#history{
+    background-color: #f8fafc;
+    padding: 20px;
+  
+}
+
+#reviews{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    
+}
+
+#reviews article blockquote{
+   margin-left: 0;
+}
+
+/* #reviews article blockquote cite{
+    line-height: 40px;
+ } */
+
+
+#prices div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 30px;
+}
+
+#prices article{
+    background-color: #f8fafc;
+    padding: 1em;
+    text-align: center;
+    font-size: larger;
+    border-radius: 25px;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
