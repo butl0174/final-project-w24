@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    /* padding: 20px; */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -8,9 +7,10 @@ body{
     padding: 30px;
 }
 
+
 img{
     width: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
 } 
 
 /* header */
@@ -23,7 +23,7 @@ header{
 }
 
 #logo{
-    width: 100px;
+    width: 200px;
 }
 
 nav ul li{
@@ -36,59 +36,51 @@ nav ul li{
 }
 
 /* packaging */
+.mock-up{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
-#packaging .wrapper{
+.packaging .wrapper{
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
 
     grid-template-areas: 
     
     "img1 img1 img1"
-    "img1 img1 img1"
-    "img1 img1 img1"
     "img2 img3 img4"
 }
 
-#packaging img:nth-child(1){
+.packaging img:nth-child(1){
     grid-area: img1;    
-}
-
-#packaging img:nth-child(2){
-    grid-area: img2; 
-}
-
-#packaging img:nth-child(3){
-    grid-area: img3; 
-}
-
-#packaging img:nth-child(4){
-    grid-area: img4;
 }
 
 /* description */
 
-h1{
-    font-size: 35px;
-    font-weight: 500;
-   
+.description h3 p {
+    margin: 0;
+}
+
+.description article{
+    padding-bottom: 40px;
     
 }
 
-ol li{
-    list-style: none;
-    margin-left: -32px;
+h1{
+    font-size: 2.027rem;
+    font-weight: 500;
 }
 
-ol li h3{
+h3{
     text-transform: uppercase;
-    padding: none;
-    margin-bottom: -20px;
+    margin-bottom: 0;
 }
 
-#description a:link,
-#description a:visited {
+.description a:link,
+.description a:visited {
   display: inline-block;
   padding: .3em 1em;
   background-color: #000;
@@ -98,57 +90,138 @@ ol li h3{
   border-radius: 5px;
   margin-top: auto;
   font-weight: 600;
+  
 }
-
 
 #history h2,
 #reviews h2,
 #prices h2{
     text-align: center;
-    font-size: 30px;
+    font-size: 1.802rem;
 }
 
 #history{
-    background-color: #f8fafc;
+    background-color: #ebe9dc;
     padding: 20px;
-  
 }
+
 
 #reviews{
     background-color: #000;
     color: #fff;
-    padding: 20px;
-    
+    padding: 20px;  
 }
 
-#reviews article blockquote{
+.quotes article{
+    padding-bottom: 55px;
+}
+
+blockquote{
    margin-left: 0;
 }
 
-/* #reviews article blockquote cite{
-    line-height: 40px;
- } */
+/* prices */
 
-
-#prices div{
+.choices {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
-    padding-bottom: 30px;
-}
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2em;
+} 
 
 #prices article{
-    background-color: #f8fafc;
-    padding: 1em;
+    background-color: #ebe9dc;
     text-align: center;
-    font-size: larger;
-    border-radius: 25px;
+    border-radius: 10px;
 }
+
+#prices article img{
+    background-color: #ebe9dc;
+    border-radius: 8px 8px 0 0;
+}
+
+#prices a{
+    text-decoration: none;
+    color: #000;
+}
+
+#prices p {
+    margin-top: 0;
+}
+
+/* footer */
 
 footer{
     background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+    color: #fff; 
+    
 }
+
+footer .wrapper{
+    padding: 1rem 1.125rem;
+    text-align: center;
+}
+
+
+ @media (min-width:48em){
+
+    .story-text{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    
+   .quotes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding-left: 40px;
+    
+    }
+
+    .choices {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+@media (min-width:60em){
+
+    .two-articles{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .mock-up{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+     .packaging .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        grid-template-areas: 
+            "img1 img2"
+            "img3 img4"
+        }
+        
+    }
+
+    .packaging,
+    .description{
+        padding-bottom: 30px;
+        
+    }
+
+    @media (min-width:75em){
+
+        body{
+            padding: 0 150px 0 150px;
+            
+        }
+    }
