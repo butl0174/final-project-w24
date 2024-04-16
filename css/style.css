@@ -7,7 +7,6 @@ body{
     padding: 30px;
 }
 
-
 img{
     width: 100%;
     border-radius: 4px;
@@ -103,6 +102,7 @@ h3{
 #history{
     background-color: #ebe9dc;
     padding: 20px;
+    margin: 0 -30px 0 -30px;
 }
 
 
@@ -110,6 +110,8 @@ h3{
     background-color: #000;
     color: #fff;
     padding: 20px;  
+    margin: 0 -30px 0 -30px;
+
 }
 
 .quotes article{
@@ -155,12 +157,16 @@ blockquote{
 footer{
     background-color: #000;
     color: #fff; 
+    margin: 0 -30px 0 -30px;
+    
     
 }
 
 footer .wrapper{
     padding: 1rem 1.125rem;
     text-align: center;
+    
+    
 }
 
 
@@ -224,4 +230,19 @@ footer .wrapper{
             padding: 0 150px 0 150px;
             
         }
+
+        #history,
+        #reviews,
+        footer{
+            margin: 0 -150px 0 -150px;
+        }
+
+        #history,
+        #reviews{
+            padding: 10px 80px 10px 80px;
+
+        }
+
+
+
     }
